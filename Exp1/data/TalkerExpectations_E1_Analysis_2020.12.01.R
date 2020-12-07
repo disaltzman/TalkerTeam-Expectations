@@ -206,7 +206,7 @@ behav_fig <- ggplot(rt_summary, aes(CondNum, corrected_rt, fill=Condition)) +
   scale_x_continuous("Condition",breaks=c(1,2),labels=c("Blocked","Mixed")) +
   scale_fill_manual(values=c("#ff6e26","#26b7ff")) + 
   facet_rep_wrap(.~Expectations,ncol=2,repeat.tick.labels=TRUE) +
-  labs(y = "Reaction time (ms)") + coord_cartesian(ylim = c(375,725)) + 
+  labs(y = "Reaction time (ms)") + coord_cartesian(ylim = c(375,600)) + 
   theme(legend.position = "none",strip.text = element_text(size = 18), axis.title.x = element_blank())
 behav_fig
 ggsave("TalkerExpectations_E1_n88.png", width = 20, height = 10, units = "cm")
